@@ -89,7 +89,7 @@ class network::global (
 
   include '::network'
 
-  case $::operatingsystem {
+  case $::osfamily {
     /^(RedHat|CentOS|OEL|OracleLinux|SLC|Scientific)$/: {
       case $::operatingsystemrelease {
         /^[456]/: { $has_systemd = false }
